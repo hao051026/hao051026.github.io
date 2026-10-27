@@ -308,7 +308,6 @@ const contactPage = head('\u8054\u7cfb\u4e0e\u62a5\u540d \u00b7 ' + D.brand,
           <div><dt>\u90ae\u7bb1</dt><dd><a href="mailto:` + D.email + `">` + D.email + `</a></dd></div>
           <div><dt>\u4e0a\u8bfe\u5730\u70b9</dt><dd>\u5b9e\u8bad\u5ba4\uff08\u62a5\u540d\u540e\u901a\u77e5\u5177\u4f53\u6559\u5ba4\uff09</dd></div>
           <div><dt>\u5f00\u8bfe\u65f6\u95f4</dt><dd>\u6bcf\u5b66\u671f\u521d\u5f00\u73ed，\u6bcf\u5468\u4e24\u8282，\u5171 8 \u5468</dd></div>
-          <div><dt>\u4eba\u6570</dt><dd>\u5c0f\u73ed\u6559\u5b66，\u540d\u989d\u6709\u9650</dd></div>
         </dl>
       </div>
       <div class="note" style="margin-top:24px"><b>\u63d0\u793a\uff1a</b>\u8054\u7cfb\u65b9\u5f0f\u8bf7\u4ee5\u6700\u65b0\u901a\u77e5\u4e3a\u51c6\u3002</div>
