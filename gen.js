@@ -88,7 +88,7 @@ const indexHtml = head(D.brand + ' \u00b7 PCB 硬件入门课', D.tagline + '\u3
         <p class="lead">` + D.tagline + `\u3002` + D.sub + `，每一节都有动手产出，不靠 PPT 讲完就散。</p>
         <div class="cta">
           <a class="btn" href="lessons.html">看完整课程</a>
-          <a class="btn ghost" href="contact.html">咨询报名</a>
+          <a class="btn ghost" href="contact.html">如何报名</a>
         </div>
       </div>
       <div class="hero-img">
@@ -295,10 +295,11 @@ const contactPage = head('\u8054\u7cfb\u4e0e\u62a5\u540d \u00b7 ' + D.brand,
       <div class="sec-head">
         <p class="eyebrow">\u8054\u7cfb</p>
         <h1>\u60f3\u5b66\u3001\u60f3\u62a5\u540d\u3001\u60f3\u95ee\u95ee\u9898</h1>
-        <p>\u76f4\u63a5\u8054\u7cfb\u6211\u5373\u53ef\u3002</p>
+        <p>\u8bfe\u7a0b\u7531\u6211\u5e26\uff0c\u62a5\u540d\u8d70\u793e\u56e2\u901a\u9053\u3002</p>
       </div>
       <div class="contact-card">
         <dl>
+          <div><dt>\u62a5\u540d\u65b9\u5f0f</dt><dd>\u5148\u52a0\u5165` + (D.club || '\u793e\u56e2') + `\u5e76\u8fdb\u5176\u62db\u65b0\u7fa4\uff0c\u518d\u5728\u7fa4\u91cc\u62a5\u540d\u8bfe\u7a0b</dd></div>
           <div><dt>\u5fae\u4fe1</dt><dd>\u5f00\u8bfe\u65f6\u516c\u5e03\uff0c\u6216\u73b0\u573a\u626b\u7801</dd></div>
           <div><dt>\u90ae\u7bb1</dt><dd><a href="mailto:` + D.email + `">` + D.email + `</a></dd></div>
           <div><dt>\u4e0a\u8bfe\u5730\u70b9</dt><dd>\u5b9e\u8bad\u5ba4\uff08\u62a5\u540d\u540e\u901a\u77e5\u5177\u4f53\u6559\u5ba4\uff09</dd></div>
