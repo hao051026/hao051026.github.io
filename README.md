@@ -1,4 +1,4 @@
-﻿# 小冉学长 · PCB 硬件入门课
+# 小冉学长 · PCB 硬件入门课
 
 静态站点，无构建步骤。所有页面由 `gen.js` 从 `data/site.json` 生成。
 
@@ -62,6 +62,23 @@ git push -u origin main
 ```
 
 然后仓库 Settings → Pages → Source 选 `main` 分支 `/ (root)` → Save。
+
+### 一键推送（推荐）
+
+```powershell
+# 无 token（走系统凭据管理器弹窗）
+.\deploy.ps1 -User hao051026 -Repo hao051026.github.io
+
+# 带 token（一次推送后自动清掉 remote 里的 token）
+.\deploy.ps1 -User hao051026 -Repo hao051026.github.io -Token ghp_xxx
+```
+
+### 换成子路径部署
+
+```bash
+py tools/set_base.py /pcb-course    # 仓库名不是 <用户名>.github.io 时用
+py tools/set_base.py /              # 切回根路径
+```
 
 之后每次更新：
 
