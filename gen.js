@@ -299,7 +299,7 @@ const contactPage = head('\u8054\u7cfb\u4e0e\u62a5\u540d \u00b7 ' + D.brand,
       </div>
       <div class="contact-card">
         <dl>
-          <div><dt>\u62a5\u540d\u65b9\u5f0f</dt><dd>\u5148\u52a0\u5165` + (D.club || '\u793e\u56e2') + `\u5e76\u8fdb\u5176\u62db\u65b0\u7fa4\uff0c\u518d\u5728\u7fa4\u91cc\u62a5\u540d\u8bfe\u7a0b</dd></div>
+          <div><dt>\u62a5\u540d\u65b9\u5f0f</dt><dd>\u5173\u6ce8\u5b66\u6821\u62db\u65b0\u901a\u77e5\uff0c\u52a0\u5165` + (D.club || '\u793e\u56e2') + `\u62db\u65b0\u7fa4\uff0c\u5728\u7fa4\u5185\u62a5\u540d\u8bfe\u7a0b</dd></div>
           <div><dt>\u5fae\u4fe1</dt><dd>\u5f00\u8bfe\u65f6\u516c\u5e03\uff0c\u6216\u73b0\u573a\u626b\u7801</dd></div>
           <div><dt>\u90ae\u7bb1</dt><dd><a href="mailto:` + D.email + `">` + D.email + `</a></dd></div>
           <div><dt>\u4e0a\u8bfe\u5730\u70b9</dt><dd>\u5b9e\u8bad\u5ba4\uff08\u62a5\u540d\u540e\u901a\u77e5\u5177\u4f53\u6559\u5ba4\uff09</dd></div>
@@ -308,6 +308,21 @@ const contactPage = head('\u8054\u7cfb\u4e0e\u62a5\u540d \u00b7 ' + D.brand,
         </dl>
       </div>
       <div class="note" style="margin-top:24px"><b>\u63d0\u793a\uff1a</b>\u8054\u7cfb\u65b9\u5f0f\u8bf7\u4ee5\u6700\u65b0\u901a\u77e5\u4e3a\u51c6\u3002</div>
+    </div>
+  </section>
+  <section class="tinted">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="eyebrow">\u5173\u4e8e\u793e\u56e2</p>
+        <h2>${D.club}</h2>
+        <p>${D.clubIntro}</p>
+      </div>
+      <div class="stages">${(D.clubBuild || []).map(function (x) { return '<article class="stage"><h3>' + x.t + '</h3><p class="stage-d">' + x.d + '</p></article>'; }).join('')}</div>
+      <h2 class="club-h2">\u6bcf\u5468\u6211\u4eec\u8fd9\u6837\u8fc7</h2>
+      <div class="stages">${(D.clubDaily || []).map(function (x) { return '<article class="stage"><h3>' + x.t + '</h3><p class="stage-d">' + x.d + '</p></article>'; }).join('')}</div>
+      <h2 class="club-h2">\u60f3\u6253\u6bd4\u8d5b\uff1f\u6211\u4eec\u5e26\u4f60\u4e0a\u573a</h2>
+      <div class="stages">${(D.clubCompete || []).map(function (x) { return '<article class="stage"><h3>' + x.t + '</h3><p class="stage-d">' + x.d + '</p></article>'; }).join('')}</div>
+      <div class="note" style="margin-top:28px"><b>\u8c01\u9002\u5408\u52a0\u5165\uff1a</b>${D.clubWho}</div>
     </div>
   </section>
 </main>
