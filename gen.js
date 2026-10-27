@@ -83,7 +83,7 @@ const indexHtml = head(D.brand + ' \u00b7 PCB 硬件入门课', D.tagline + '\u3
   <section class="hero">
     <div class="wrap grid">
       <div>
-        <p class="eyebrow">PCB 硬件入门 \u00b7 小班实操</p>
+        <p class="eyebrow">PCB 硬件入门</p>
         <h1>从一块电路板开始，<br><span class="hl">做出属于你的作品</span></h1>
         <p class="lead">` + D.tagline + `\u3002` + D.sub + `，每一节都有动手产出，不靠 PPT 讲完就散。</p>
         <div class="cta">
