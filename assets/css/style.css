@@ -120,6 +120,10 @@ section.tinted{background:var(--bg-soft); border-block:1px solid var(--line)}
 .gallery-grid figure::after{content:"⤢"; position:absolute; top:8px; right:10px; color:#fff; font-size:13px; opacity:0; transition:opacity .25s; text-shadow:0 1px 4px rgba(0,0,0,.9)}
 .gallery-grid figure:hover::after{opacity:.9}
 
+
+.video-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px}
+.video-grid figure{margin:0;background:var(--card);border:1px solid var(--line);border-radius:10px;overflow:hidden}
+.video-grid figcaption{padding:10px;font-size:13px;color:var(--fg-dim);text-align:center}
 /* ---------- lightbox ---------- */
 .lb{position:fixed; inset:0; background:rgba(6,9,13,.94); display:none; align-items:center; justify-content:center; z-index:100; padding:20px}
 .lb.on{display:flex}
