@@ -1,0 +1,8 @@
+_shots/
+_probe.html
+_m_*.html
+_dump.txt
+__pycache__/
+*.pyc
+.DS_Store
+Thumbs.db
