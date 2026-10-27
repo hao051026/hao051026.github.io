@@ -252,9 +252,9 @@
   "siteUrl": "https://xiaoran-pcb.github.io",
   "repo": "xiaoran-pcb/xiaoran-pcb.github.io",
   "base": "",
-  "club": "电子创客协会",
+  "club": "电子爱好者协会",
   "clubSlogan": "把脑子里的奇思妙想，焊成现实。",
-  "clubIntro": "电子创客协会是一个面向全校的硬件实践社团。不管你是零基础想点亮第一颗 LED，还是已经在做 STM32 项目，这里都有你能玩进去的东西。",
+  "clubIntro": "电子爱好者协会是一个面向全校的硬件实践社团。不管你是零基础想点亮第一颗 LED，还是已经在做 STM32 项目，这里都有你能玩进去的东西。",
   "clubBuild": [
     {
       "t": "智能车与机器人",
