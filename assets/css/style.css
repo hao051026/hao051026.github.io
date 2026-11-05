@@ -124,6 +124,65 @@ section.tinted{background:var(--bg-soft); border-block:1px solid var(--line)}
 .video-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px}
 .video-grid figure{margin:0;background:var(--card);border:1px solid var(--line);border-radius:10px;overflow:hidden}
 .video-grid figcaption{padding:10px;font-size:13px;color:var(--fg-dim);text-align:center}
+
+/* ---------- boot animation ---------- */
+#boot{
+  position:fixed; inset:0; z-index:9999; background:var(--bg);
+  display:flex; flex-direction:column; align-items:center; justify-content:center;
+  gap:14px; animation:bootOut .6s ease 2.9s forwards;
+}
+#boot .pcb{width:min(78vw,420px); height:auto; overflow:visible}
+#boot .trace{
+  fill:none; stroke:var(--brand); stroke-width:2.5; stroke-linecap:round; stroke-linejoin:round;
+  stroke-dasharray:1; stroke-dashoffset:1;
+  animation:traceDraw .55s ease forwards;
+  filter:drop-shadow(0 0 4px rgba(62,166,255,.55));
+}
+#boot .trace:nth-of-type(1){animation-delay:.05s}
+#boot .trace:nth-of-type(2){animation-delay:.12s}
+#boot .trace:nth-of-type(3){animation-delay:.19s}
+#boot .trace:nth-of-type(4){animation-delay:.26s}
+#boot .trace:nth-of-type(5){animation-delay:.33s}
+#boot .trace:nth-of-type(6){animation-delay:.40s}
+#boot .trace:nth-of-type(7){animation-delay:.47s}
+#boot .trace:nth-of-type(8){animation-delay:.54s}
+#boot .pad{fill:var(--brand-2); opacity:0; animation:padOn .3s ease forwards .85s}
+#boot .chip{
+  fill:none; stroke:var(--brand-2); stroke-width:2.5;
+  opacity:0; animation:chipOn .45s ease forwards .9s;
+}
+#boot .core{
+  fill:var(--brand); opacity:0;
+  animation:coreOn .5s ease forwards 1.15s, corePulse 1.6s ease-in-out 1.65s infinite;
+}
+#boot .boot-brand{
+  margin:6px 0 0; font-size:clamp(20px,4.6vw,26px); font-weight:700; letter-spacing:.14em;
+  color:var(--fg); opacity:0; animation:fadeUp .55s ease forwards 1.5s;
+}
+#boot .boot-sub{
+  margin:0; font-size:11px; letter-spacing:.34em; color:var(--brand-2);
+  opacity:0; animation:fadeUp .55s ease forwards 1.7s;
+}
+#boot .boot-bar{
+  width:min(56vw,190px); height:2px; background:var(--line); border-radius:2px;
+  margin-top:10px; overflow:hidden; opacity:0; animation:fadeUp .4s ease forwards 1.85s;
+}
+#boot .boot-bar i{
+  display:block; height:100%; width:0; border-radius:2px;
+  background:linear-gradient(90deg,var(--brand),var(--brand-2));
+  animation:barFill 1s cubic-bezier(.4,0,.2,1) forwards 1.95s;
+}
+@keyframes traceDraw{to{stroke-dashoffset:0}}
+@keyframes padOn{to{opacity:1}}
+@keyframes chipOn{to{opacity:1}}
+@keyframes coreOn{to{opacity:1}}
+@keyframes corePulse{0%,100%{opacity:1; filter:drop-shadow(0 0 6px var(--brand))}50%{opacity:.55; filter:drop-shadow(0 0 14px var(--brand))}}
+@keyframes fadeUp{from{opacity:0; transform:translateY(8px)} to{opacity:1; transform:none}}
+@keyframes barFill{to{width:100%}}
+@keyframes bootOut{to{opacity:0; visibility:hidden}}
+@media (prefers-reduced-motion:reduce){
+  #boot{display:none}
+}
 /* ---------- lightbox ---------- */
 .lb{position:fixed; inset:0; background:rgba(6,9,13,.94); display:none; align-items:center; justify-content:center; z-index:100; padding:20px}
 .lb.on{display:flex}
